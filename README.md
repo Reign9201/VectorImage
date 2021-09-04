@@ -53,4 +53,5 @@ val drawable =  VectorImage(this, R.drawable.ic_headset)
 
 findViewById<AppCompatImageView>(R.id.iv).setImageDrawable(drawable)
 ```    
+上述接口调用不受Android API 限制，使用者可以无缝调用。
 
