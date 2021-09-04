@@ -89,13 +89,13 @@ class VectorImage(
 
     }
 
-    @SuppressLint("ResourceType")
     private fun createDrawable(
         context: Context,
         @DrawableRes vectorResId: Int
     ): VectorDrawableCompat? {
         try {
-            val parser: XmlPullParser = context.resources.getXml(vectorResId)
+            @SuppressLint("ResourceType") val parser: XmlPullParser =
+                context.resources.getXml(vectorResId)
             val attrs = Xml.asAttributeSet(parser)
             var type: Int
             while (parser.next().also { type = it } != 2 && type != 1) {
